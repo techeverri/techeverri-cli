@@ -1,0 +1,52 @@
+import fs from "fs";
+import path from "path";
+import chalk from "chalk";
+import boxen from "boxen";
+
+const colombia = chalk.yellow("Colo") + chalk.blue("mb") + chalk.red("ia");
+
+const basics = {
+  name: "Tomas Echeverri",
+  handle: "techeverri",
+  location: `Made in ${colombia}. Living in Sweden.`,
+  work: "Software Engineer",
+};
+
+const links = {
+  github: `https://github.com/${chalk.green("techeverri")}`,
+  linkedin: `https://www.linkedin.com/in/${chalk.blue("tomechval")}`,
+  npm: `https://www.npmjs.com/${chalk.red("~techeverri")}`,
+  twitter: `https://twitter.com/${chalk.cyan("TomasEcheverri")}`,
+  website: `https://techeverri.dev`,
+};
+
+const text = `
+${chalk.white(basics.name)} / ${chalk.white(basics.handle)}
+${chalk.gray.italic(basics.location)}
+
+    ${chalk.white.bold("Work:")} ${chalk.white(basics.work)}
+ ${chalk.white.bold("Twitter:")} ${chalk.gray(links.twitter)}
+  ${chalk.white.bold("GitHub:")} ${chalk.gray(links.github)}
+     ${chalk.white.bold("npm:")} ${chalk.gray(links.npm)}
+${chalk.white.bold("LinkedIn:")} ${chalk.gray(links.linkedin)}
+ ${chalk.white.bold("Website:")} ${chalk.magenta(links.website)}
+
+    ${chalk.white.bold("Card:")} npx techeverri
+`;
+
+const boxenOptions = {
+  margin: 1,
+  padding: 1,
+  borderStyle: "single",
+};
+
+const data = chalk.green(boxen(text.trim(), boxenOptions));
+
+const file = path.join(path.resolve(), "bin/card");
+
+const writeFileOptions = {
+  encoding: "utf8",
+  flag: "w",
+};
+
+fs.writeFileSync(file, data, writeFileOptions);
