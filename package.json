@@ -17,8 +17,7 @@
     "url": "https://github.com/techeverri"
   },
   "files": [
-    "bin/card",
-    "src/cli.js"
+    "bin/card"
   ],
   "type": "module",
   "main": "./bin/cli.js",
