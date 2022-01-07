@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import url from "url";
 import chalk from "chalk";
 import boxen from "boxen";
 
@@ -42,7 +43,9 @@ const boxenOptions = {
 
 const data = chalk.green(boxen(text.trim(), boxenOptions));
 
-const file = path.join(path.resolve(), "bin/card");
+const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
+
+const file = path.join(__dirname, "bin", "card");
 
 const writeFileOptions = {
   encoding: "utf8",
