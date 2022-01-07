@@ -5,29 +5,31 @@ name: Publish npm
 
 on:
   release:
-    types: [created]
+    types:
+      - created
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version-file: ".nvmrc"
       - run: npm ci
       - run: npm run lint
       - run: npm run format:check
       - run: npm run build
+      - run: npm run test
 
   publish-npm:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version-file: ".nvmrc"
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm publish

@@ -1,6 +1,6 @@
 {
   "name": "techeverri",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Personal card for Tomas Echeverri (@techeverri)",
   "keywords": [
     "business card",
@@ -30,9 +30,10 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
+    "test": "jest",
+    "print": "node ./bin/cli.js",
     "build": "node ./build.js",
-    "prestart": "npm run build",
-    "start": "node ./bin/cli.js",
+    "postbuild": "npm run print",
     "prepack": "npm run build",
     "prepublish": "npm run build"
   },
@@ -41,6 +42,8 @@
     "chalk": "^5.0.0",
     "eslint": "^8.6.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^25.3.4",
+    "jest": "^27.4.7",
     "prettier": "^2.5.1"
   },
   "engines": {
