@@ -30,9 +30,10 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
+    "print": "node ./bin/cli.js",
     "build": "node ./build.js",
     "prestart": "npm run build",
-    "start": "node ./bin/cli.js",
+    "start": "npm run print",
     "prepack": "npm run build",
     "prepublish": "npm run build"
   },
