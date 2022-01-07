@@ -30,6 +30,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
+    "test": "jest",
     "print": "node ./bin/cli.js",
     "build": "node ./build.js",
     "postbuild": "npm run print",
