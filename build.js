@@ -4,6 +4,9 @@ import url from "url";
 import chalk from "chalk";
 import boxen from "boxen";
 
+// https://github.com/chalk/chalk#chalklevel
+chalk.level = 3;
+
 const colombia = chalk.yellow("Colo") + chalk.blue("mb") + chalk.red("ia");
 
 const basics = {
