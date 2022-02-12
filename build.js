@@ -9,11 +9,13 @@ chalk.level = 3;
 
 const colombia = chalk.yellow("Colo") + chalk.blue("mb") + chalk.red("ia");
 
+const employer = chalk.green.italic("Shopify");
+
 const basics = {
   name: "Tomas Echeverri",
   handle: "techeverri",
   location: `Made in ${colombia}. Living in Sweden.`,
-  work: "Software Engineer",
+  work: `Software Engineer at ${employer}`,
 };
 
 const links = {
