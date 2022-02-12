@@ -6,6 +6,10 @@ _Inspired by [bitandbang](https://github.com/bnb/bitandbang)'s card._
 
 ## Usage
 
+### Prerequisites
+
+- Requires [Node.js](https://nodejs.org/) (v12 or newer)
+
 ### npm
 
 To see my `npm` card, run the following command:
