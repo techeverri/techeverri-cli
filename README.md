@@ -14,4 +14,22 @@ To see my `npm` card, run the following command:
 npx techeverri
 ```
 
+## Development
+
+### Prerequisites
+
+- Requires [Node.js](https://nodejs.org/) (v16 or newer)
+
+### Commands
+
+| Command          | Description                       |
+| ---------------- | --------------------------------- |
+| `npm run print`  | Print the card                    |
+| `npm run build`  | Build and print the card          |
+| `npm run test`   | Run smoke tests (Jest)            |
+| `npm run format` | Format all files (Prettier)       |
+| `npm run lint`   | Run static code analysis (ESLint) |
+
+## Screenshots
+
 ![image](./screenshot.png)
