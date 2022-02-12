@@ -33,9 +33,7 @@
     "test": "jest",
     "print": "node ./bin/cli.js",
     "build": "node ./build.js",
-    "postbuild": "npm run print",
-    "prepack": "npm run build",
-    "prepublish": "npm run build"
+    "postbuild": "npm run print"
   },
   "devDependencies": {
     "boxen": "^6.2.1",
@@ -47,6 +45,6 @@
     "prettier": "^2.5.1"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=12"
   }
 }
