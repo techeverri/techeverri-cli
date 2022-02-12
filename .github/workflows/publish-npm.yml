@@ -9,21 +9,11 @@ on:
       - created
 
 jobs:
-  build:
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version-file: ".nvmrc"
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run format:check
-      - run: npm run build
-      - run: npm run test
+  ci:
+    uses: techeverri/techeverri-cli/.github/workflows/ci.yml@main
 
   publish-npm:
-    needs: build
+    needs: ci
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
@@ -32,6 +22,7 @@ jobs:
           node-version-file: ".nvmrc"
           registry-url: https://registry.npmjs.org/
       - run: npm ci
+      - run: npm build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
