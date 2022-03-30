@@ -11,7 +11,7 @@ on:
       - LICENSE
       - README.md
       - screenshot.png
-  workflow_call:
+  workflow_call: ~
 
 jobs:
   build:
