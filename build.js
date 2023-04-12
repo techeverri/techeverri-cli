@@ -23,21 +23,23 @@ const links = {
   linkedin: `https://www.linkedin.com/in/${chalk.blue("tomechval")}`,
   npm: `https://www.npmjs.com/${chalk.red("~techeverri")}`,
   twitter: `https://twitter.com/${chalk.cyan("TomasEcheverri")}`,
-  website: `https://techeverri.dev`,
+  website: "https://techeverri.dev",
+  mastodon: `https://mastodon.social/${chalk.magenta("@techeverri")}`,
 };
 
 const text = `
 ${chalk.white(basics.name)} / ${chalk.white(basics.handle)}
 ${chalk.gray.italic(basics.location)}
 
-    ${chalk.white.bold("Work:")} ${chalk.white(basics.work)}
- ${chalk.white.bold("Twitter:")} ${chalk.gray(links.twitter)}
-  ${chalk.white.bold("GitHub:")} ${chalk.gray(links.github)}
-     ${chalk.white.bold("npm:")} ${chalk.gray(links.npm)}
-${chalk.white.bold("LinkedIn:")} ${chalk.gray(links.linkedin)}
- ${chalk.white.bold("Website:")} ${chalk.magenta(links.website)}
+     ${chalk.white.bold("Work:")} ${chalk.white(basics.work)}
+  ${chalk.white.bold("Twitter:")} ${chalk.gray(links.twitter)}
+ ${chalk.white.bold("Mastodon:")} ${chalk.gray(links.mastodon)}
+   ${chalk.white.bold("GitHub:")} ${chalk.gray(links.github)}
+      ${chalk.white.bold("npm:")} ${chalk.gray(links.npm)}
+ ${chalk.white.bold("LinkedIn:")} ${chalk.gray(links.linkedin)}
+  ${chalk.white.bold("Website:")} ${chalk.magenta(links.website)}
 
-    ${chalk.white.bold("Card:")} npx techeverri
+     ${chalk.white.bold("Card:")} npx techeverri
 `;
 
 const boxenOptions = {
