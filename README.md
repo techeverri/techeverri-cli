@@ -22,7 +22,7 @@ npx techeverri
 
 ### Prerequisites
 
-- Requires [Node.js](https://nodejs.org/) (v14 or newer)
+- Requires [Node.js](https://nodejs.org/) (v16 or newer)
 
 ### Commands
 
