@@ -8,7 +8,7 @@ _Inspired by [bitandbang](https://github.com/bnb/bitandbang)'s card._
 
 ### Prerequisites
 
-- Requires [Node.js](https://nodejs.org/) (v14 or newer)
+- Requires [Node.js](https://nodejs.org/) (v16 or newer)
 
 ### npm
 
