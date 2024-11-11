@@ -22,7 +22,7 @@ const links = {
   github: `https://github.com/${chalk.green("techeverri")}`,
   linkedin: `https://www.linkedin.com/in/${chalk.blue("tomechval")}`,
   npm: `https://www.npmjs.com/${chalk.red("~techeverri")}`,
-  twitter: `https://twitter.com/${chalk.cyan("TomasEcheverri")}`,
+  x: `https://x.com/${chalk.cyan("TomasEcheverri")}`,
   website: "https://techeverri.dev",
   mastodon: `https://mastodon.social/${chalk.magenta("@techeverri")}`,
 };
@@ -32,7 +32,7 @@ ${chalk.white(basics.name)} / ${chalk.white(basics.handle)}
 ${chalk.gray.italic(basics.location)}
 
      ${chalk.white.bold("Work:")} ${chalk.white(basics.work)}
-  ${chalk.white.bold("Twitter:")} ${chalk.gray(links.twitter)}
+        ${chalk.white.bold("X:")} ${chalk.gray(links.x)}
  ${chalk.white.bold("Mastodon:")} ${chalk.gray(links.mastodon)}
    ${chalk.white.bold("GitHub:")} ${chalk.gray(links.github)}
       ${chalk.white.bold("npm:")} ${chalk.gray(links.npm)}

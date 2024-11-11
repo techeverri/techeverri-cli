@@ -14,7 +14,7 @@ describe("build", () => {
       [32m   │   [90m[3mMade in [33mColo[39m[32m[90m[34mmb[39m[32m[90m[31mia[39m[32m[90m. Living in Sweden.[23m[39m[32m                │[39m
       [32m   │                                                      │[39m
       [32m   │        [37m[1mWork:[22m[39m[32m [37mSenior Software Developer at [32m[3mShopify[23m[39m[32m[37m[39m[32m    │[39m
-      [32m   │     [37m[1mTwitter:[22m[39m[32m [90mhttps://twitter.com/[36mTomasEcheverri[39m[32m[90m[39m[32m      │[39m
+      [32m   │           [37m[1mX:[22m[39m[32m [90mhttps://x.com/[36mTomasEcheverri[39m[32m[90m[39m[32m            │[39m
       [32m   │    [37m[1mMastodon:[22m[39m[32m [90mhttps://mastodon.social/[35m@techeverri[39m[32m[90m[39m[32m     │[39m
       [32m   │      [37m[1mGitHub:[22m[39m[32m [90mhttps://github.com/[32mtecheverri[39m[32m[90m[39m[32m           │[39m
       [32m   │         [37m[1mnpm:[22m[39m[32m [90mhttps://www.npmjs.com/[31m~techeverri[39m[32m[90m[39m[32m       │[39m
