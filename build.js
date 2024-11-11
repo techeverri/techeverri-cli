@@ -15,7 +15,7 @@ const basics = {
   name: "Tomas Echeverri",
   handle: "techeverri",
   location: `Made in ${colombia}. Living in Sweden.`,
-  work: `Software Developer at ${employer}`,
+  work: `Senior Software Developer at ${employer}`,
 };
 
 const links = {
