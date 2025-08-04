@@ -11,6 +11,8 @@ on:
 jobs:
   ci:
     uses: techeverri/techeverri-cli/.github/workflows/ci.yml@main
+    permissions:
+      contents: read
 
   publish-npm:
     needs: ci
