@@ -9,6 +9,7 @@ on:
   pull_request:
     branches:
       - main
+      - "dependabot/**"
     paths-ignore:
       - LICENSE
       - README.md
