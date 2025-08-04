@@ -57,4 +57,4 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm ci --production
-      - run: npm run print
+      - run: node ./bin/cli.js
