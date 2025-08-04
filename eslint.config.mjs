@@ -1,11 +1,19 @@
 import js from "@eslint/js";
-import jest from "eslint-plugin-jest";
+import vitest from "@vitest/eslint-plugin";
 import prettierConfig from "eslint-config-prettier";
 import globals from "globals";
 
 export default [
   js.configs.recommended,
-  jest.configs["flat/recommended"],
+  {
+    files: ["**/*.test.js", "**/*.spec.js"],
+    plugins: {
+      vitest,
+    },
+    rules: {
+      ...vitest.configs.recommended.rules,
+    },
+  },
   prettierConfig,
   {
     languageOptions: {
@@ -14,9 +22,6 @@ export default [
       },
       ecmaVersion: 2024,
       sourceType: "module",
-    },
-    plugins: {
-      jest,
     },
   },
 ];

@@ -30,7 +30,7 @@ npx techeverri
 | ---------------- | --------------------------------- |
 | `npm run print`  | Print the card                    |
 | `npm run build`  | Build and print the card          |
-| `npm run test`   | Run smoke tests (Jest)            |
+| `npm run test`   | Run smoke tests (Vitest)          |
 | `npm run format` | Format all files (Prettier)       |
 | `npm run lint`   | Run static code analysis (ESLint) |
 
