@@ -17,6 +17,8 @@ on:
 
 jobs:
   build:
+    permissions:
+      contents: read
     runs-on: ${{ matrix.virtual-environment }}
 
     strategy:
@@ -39,6 +41,8 @@ jobs:
 
   print:
     needs: build
+    permissions:
+      contents: read
     runs-on: ${{ matrix.virtual-environment }}
 
     strategy:
