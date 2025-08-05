@@ -6,23 +6,19 @@ _Inspired by [bitandbang](https://github.com/bnb/bitandbang)'s card._
 
 ## Usage
 
-### Prerequisites
-
-- Requires [Node.js](https://nodejs.org/) (v16 or newer)
-
-### npm
-
 To see my `npm` card, run the following command:
 
 ```sh
 npx techeverri
 ```
 
+_Requires [Node.js](https://nodejs.org/) v16 or newer_
+
 ## Development
 
 ### Prerequisites
 
-- Requires [Bun](https://bun.sh/) (v1.0 or newer)
+- [Bun](https://bun.sh/) v1.0 or newer
 
 ### Setup
 
