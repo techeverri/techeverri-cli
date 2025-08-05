@@ -22,17 +22,25 @@ npx techeverri
 
 ### Prerequisites
 
-- Requires [Node.js](https://nodejs.org/) (v16 or newer)
+- Requires [Bun](https://bun.sh/) (v1.0 or newer)
+
+### Setup
+
+Install dependencies:
+
+```sh
+bun install
+```
 
 ### Commands
 
 | Command          | Description                       |
 | ---------------- | --------------------------------- |
-| `npm run print`  | Print the card                    |
-| `npm run build`  | Build and print the card          |
-| `npm run test`   | Run smoke tests (Vitest)          |
-| `npm run format` | Format all files (Prettier)       |
-| `npm run lint`   | Run static code analysis (ESLint) |
+| `bun run print`  | Print the card                    |
+| `bun run build`  | Build and print the card          |
+| `bun test`       | Run smoke tests (Bun test runner) |
+| `bun run format` | Format all files (Prettier)       |
+| `bun run lint`   | Run static code analysis (ESLint) |
 
 ## Screenshots
 
