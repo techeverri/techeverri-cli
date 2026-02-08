@@ -1,0 +1,7 @@
+{
+  "image": "oven/bun",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "postCreateCommand": "bun add -g @google/generative-ai-cli"
+}
