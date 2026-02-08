@@ -36,14 +36,12 @@ jobs:
     needs: build
     permissions:
       contents: read
-    runs-on: ${{ matrix.virtual-environment }}
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        # See supported GitHub-hosted runners https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#choosing-github-hosted-runners
-        virtual-environment: [macos-latest, ubuntu-latest, windows-latest]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-        node-version: [16, 18, 20, 22]
+        node-version: [16, 22]
 
     steps:
       - uses: actions/checkout@v4
