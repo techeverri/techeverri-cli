@@ -22,7 +22,6 @@
   },
   "bin": "./bin/cli.js",
   "files": [
-    "bin/cli.js",
     "dist/card"
   ],
   "type": "module",
@@ -42,7 +41,6 @@
     "oxfmt": "^0.73.0",
     "oxlint": "^1.88.0"
   },
-  "preferGlobal": true,
   "engines": {
     "bun": ">=1.0.0",
     "node": ">=16"
