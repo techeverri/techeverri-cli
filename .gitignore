@@ -5,21 +5,14 @@ node_modules/
 logs/
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Environment
 .env
-.env.test
 
 # Build output
 dist/*
 !dist/card
 *.tgz
-
-# Caches
-.cache/
-.npm/
 
 # macOS
 .DS_Store

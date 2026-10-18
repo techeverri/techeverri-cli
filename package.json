@@ -5,9 +5,7 @@
   "keywords": [
     "business card",
     "card",
-    "npm",
     "npm card",
-    "npx",
     "npx card",
     "techeverri"
   ],
@@ -42,7 +40,6 @@
     "oxlint": "^1.88.0"
   },
   "engines": {
-    "bun": ">=1.0.0",
     "node": ">=16"
   },
   "packageManager": "bun@1.4.3"
