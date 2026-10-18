@@ -14,6 +14,10 @@ on:
       - LICENSE
       - README.md
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     permissions:
@@ -33,7 +37,6 @@ jobs:
       - run: bun test
 
   print:
-    needs: build
     permissions:
       contents: read
     runs-on: ubuntu-latest
