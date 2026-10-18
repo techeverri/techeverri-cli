@@ -5,32 +5,31 @@
   "keywords": [
     "business card",
     "card",
-    "npm card",
     "npm",
-    "npx card",
+    "npm card",
     "npx",
+    "npx card",
     "techeverri"
   ],
   "license": "MIT",
-  "preferGlobal": true,
   "author": {
     "name": "Tomas Echeverri",
     "url": "https://github.com/techeverri"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techeverri/techeverri-cli.git"
+  },
+  "bin": "./bin/cli.js",
   "files": [
     "bin/card"
   ],
   "type": "module",
   "main": "./bin/cli.js",
-  "bin": "./bin/cli.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/techeverri/techeverri-cli.git"
-  },
   "scripts": {
-    "format": "bunx prettier --write .",
-    "format:check": "bunx prettier --check .",
-    "lint": "bunx eslint .",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "lint": "oxlint",
     "test": "bun test",
     "test:watch": "bun test --watch",
     "print": "bun run ./bin/cli.js",
@@ -38,17 +37,15 @@
     "postbuild": "bun run print"
   },
   "devDependencies": {
-    "@eslint/js": "^9.32.0",
     "boxen": "^8.0.0",
     "chalk": "^5.0.0",
-    "eslint": "^9.32.0",
-    "eslint-config-prettier": "^10.1.8",
-    "globals": "^17.3.0",
-    "prettier": "^3.0.0"
+    "oxfmt": "^0.73.0",
+    "oxlint": "^1.88.0"
   },
-  "packageManager": "bun@1.0.0",
+  "preferGlobal": true,
   "engines": {
-    "node": ">=16",
-    "bun": ">=1.0.0"
-  }
+    "bun": ">=1.0.0",
+    "node": ">=16"
+  },
+  "packageManager": "bun@1.0.0"
 }

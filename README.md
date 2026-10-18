@@ -35,8 +35,8 @@ bun install
 | `bun run print`  | Print the card                    |
 | `bun run build`  | Build and print the card          |
 | `bun test`       | Run smoke tests (Bun test runner) |
-| `bun run format` | Format all files (Prettier)       |
-| `bun run lint`   | Run static code analysis (ESLint) |
+| `bun run format` | Format all files (Oxfmt)          |
+| `bun run lint`   | Run static code analysis (Oxlint) |
 
 ## Screenshots
 
