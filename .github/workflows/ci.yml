@@ -13,7 +13,6 @@ on:
     paths-ignore:
       - LICENSE
       - README.md
-      - screenshot.png
 
 jobs:
   build:

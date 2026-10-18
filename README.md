@@ -37,7 +37,3 @@ bun install
 | `bun test`       | Run smoke tests (Bun test runner) |
 | `bun run format` | Format all files (Oxfmt)          |
 | `bun run lint`   | Run static code analysis (Oxlint) |
-
-## Screenshots
-
-![image](./screenshot.png)
