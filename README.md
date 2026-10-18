@@ -33,7 +33,7 @@ bun install
 | Command          | Description                       |
 | ---------------- | --------------------------------- |
 | `bun run print`  | Print the card                    |
-| `bun run build`  | Build and print the card          |
+| `bun run build`  | Build the card                    |
 | `bun test`       | Run smoke tests (Bun test runner) |
 | `bun run format` | Format all files (Oxfmt)          |
 | `bun run lint`   | Run static code analysis (Oxlint) |

@@ -1,8 +1,5 @@
-import fs from "fs";
-import path from "path";
-import url from "url";
-import chalk from "chalk";
 import boxen from "boxen";
+import chalk from "chalk";
 
 // https://github.com/chalk/chalk#chalklevel
 chalk.level = 3;
@@ -50,15 +47,6 @@ const boxenOptions = {
   borderStyle: "single",
 };
 
-const data = chalk.green(boxen(text.trim(), boxenOptions));
-
-const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
-
-const file = path.join(__dirname, "bin", "card");
-
-const writeFileOptions = {
-  encoding: "utf8",
-  flag: "w",
-};
-
-fs.writeFileSync(file, data, writeFileOptions);
+export function renderCard() {
+  return chalk.green(boxen(text.trim(), boxenOptions));
+}
