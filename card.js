@@ -19,25 +19,26 @@ const links = {
   website: "https://techeverri.dev",
 };
 
-const text = `
-${chalk.white(basics.name)}
-
-     ${chalk.white.bold("Work:")} ${chalk.white(basics.work)}
-        ${chalk.white.bold("X:")} ${chalk.gray(links.x)}
-   ${chalk.white.bold("GitHub:")} ${chalk.gray(links.github)}
-      ${chalk.white.bold("npm:")} ${chalk.gray(links.npm)}
- ${chalk.white.bold("LinkedIn:")} ${chalk.gray(links.linkedin)}
-  ${chalk.white.bold("Website:")} ${chalk.magenta(links.website)}
-
-     ${chalk.white.bold("Card:")} npx techeverri
-`;
-
 const boxenOptions = {
   margin: 1,
   padding: 1,
   borderStyle: "single",
+  borderColor: "green",
 };
 
 export function renderCard() {
-  return chalk.green(boxen(text.trim(), boxenOptions));
+  const text = `
+${chalk.bold(basics.name)}
+
+     ${chalk.bold("Work:")} ${basics.work}
+        ${chalk.bold("X:")} ${chalk.dim(links.x)}
+   ${chalk.bold("GitHub:")} ${chalk.dim(links.github)}
+      ${chalk.bold("npm:")} ${chalk.dim(links.npm)}
+ ${chalk.bold("LinkedIn:")} ${chalk.dim(links.linkedin)}
+  ${chalk.bold("Website:")} ${chalk.magenta(links.website)}
+
+     ${chalk.bold("Card:")} ${chalk.dim("npx techeverri")}
+`;
+
+  return boxen(text.trim(), boxenOptions);
 }
