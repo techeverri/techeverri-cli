@@ -9,9 +9,7 @@ npm-debug.log*
 # Environment
 .env
 
-# Build output
-dist/*
-!dist/card
+# Package output
 *.tgz
 
 # macOS
