@@ -19,6 +19,7 @@ jobs:
     needs: ci
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       id-token: write
     steps:
       - uses: actions/checkout@v7
@@ -30,6 +31,5 @@ jobs:
         with:
           node-version-file: ".nvmrc"
           registry-url: https://registry.npmjs.org/
+      # Trusted publishing (OIDC); no NPM_TOKEN required.
       - run: npm publish --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
