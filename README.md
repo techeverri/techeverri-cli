@@ -6,7 +6,7 @@ My npm card
 
 | Dark                                                                            | Light                                                                             |
 | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [![dark mode](./screenshot-dark.svg)](https://www.npmjs.com/package/techeverri) | [![light mode](./screenshot-light.svg)](https://www.npmjs.com/package/techeverri) |
+| [![dark mode](./screenshot-dark.png)](https://www.npmjs.com/package/techeverri) | [![light mode](./screenshot-light.png)](https://www.npmjs.com/package/techeverri) |
 
 ## Usage
 
@@ -28,6 +28,6 @@ bun test
 
 Other scripts are in `package.json`
 
-Regenerate the screenshots with `bun run screenshot` (requires Go 1.24+)
+Regenerate the screenshots with `bun run screenshot` (requires VHS or Docker)
 
 Inspired by [bitandbang](https://github.com/bnb/bitandbang)'s card

@@ -46,15 +46,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-go@v7
-        with:
-          go-version-file: tools/go.mod
-          cache-dependency-path: tools/go.sum
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version-file: ".bun-version"
-      - run: bun run screenshot
-      - run: git diff --exit-code -- screenshot-dark.svg screenshot-light.svg
+      - run: sh screenshot.sh
+      - run: git diff --exit-code -- screenshot-dark.png screenshot-light.png
 
   print:
     permissions:

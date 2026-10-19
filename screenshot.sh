@@ -3,23 +3,19 @@ set -eu
 
 cd "$(dirname "$0")"
 
-ROOT=$(pwd)
-BIN="$ROOT/node_modules/.cache/freeze-bin"
-BUN=$(command -v bun)
-mkdir -p "$(dirname "$BIN")"
+if command -v vhs >/dev/null 2>&1; then
+  vhs screenshot-light.tape
+  vhs screenshot-dark.tape
+else
+  HOME_DIR=$(mktemp -d)
+  trap 'rm -rf "$HOME_DIR"' EXIT
 
-go -C tools build -o "$BIN" github.com/charmbracelet/freeze
-
-"$BIN" \
-  --config "$ROOT/freeze.json" \
-  --execute "\"$BUN\" \"$ROOT/bin/cli.js\"" \
-  --output "$ROOT/screenshot-dark.svg" \
-  < /dev/null
-
-"$BIN" \
-  --config "$ROOT/freeze.json" \
-  --background "#ffffff" \
-  --theme github-light \
-  --execute "\"$BUN\" \"$ROOT/bin/cli.js\"" \
-  --output "$ROOT/screenshot-light.svg" \
-  < /dev/null
+  docker run --rm \
+    --user "$(id -u):$(id -g)" \
+    -e HOME=/home/vhs \
+    -v "$PWD:/vhs" \
+    -v "$HOME_DIR:/home/vhs" \
+    --entrypoint sh \
+    ghcr.io/charmbracelet/vhs \
+    -c 'vhs screenshot-light.tape && vhs screenshot-dark.tape'
+fi
