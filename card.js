@@ -4,14 +4,10 @@ import chalk from "chalk";
 // https://github.com/chalk/chalk#chalklevel
 chalk.level = 3;
 
-const colombia = chalk.yellow("Colo") + chalk.blue("mb") + chalk.red("ia");
-
 const employer = chalk.green.italic("Shopify");
 
 const basics = {
   name: "Tomas Echeverri",
-  handle: "techeverri",
-  location: `Made in ${colombia}. Living in Sweden.`,
   work: `Senior Software Developer at ${employer}`,
 };
 
@@ -21,18 +17,13 @@ const links = {
   npm: `https://www.npmjs.com/${chalk.red("~techeverri")}`,
   x: `https://x.com/${chalk.cyan("TomasEcheverri")}`,
   website: "https://techeverri.dev",
-  mastodon: `https://mastodon.social/${chalk.magenta("@techeverri")}`,
-  bluesky: `https://bsky.app/profile/${chalk.blue("techeverri.bsky.social")}`,
 };
 
 const text = `
-${chalk.white(basics.name)} / ${chalk.white(basics.handle)}
-${chalk.gray.italic(basics.location)}
+${chalk.white(basics.name)}
 
      ${chalk.white.bold("Work:")} ${chalk.white(basics.work)}
         ${chalk.white.bold("X:")} ${chalk.gray(links.x)}
- ${chalk.white.bold("Mastodon:")} ${chalk.gray(links.mastodon)}
-  ${chalk.white.bold("Bluesky:")} ${chalk.gray(links.bluesky)}
    ${chalk.white.bold("GitHub:")} ${chalk.gray(links.github)}
       ${chalk.white.bold("npm:")} ${chalk.gray(links.npm)}
  ${chalk.white.bold("LinkedIn:")} ${chalk.gray(links.linkedin)}
