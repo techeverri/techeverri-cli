@@ -36,6 +36,23 @@ jobs:
       - run: git diff --exit-code -- bin/card
       - run: bun test
 
+  screenshot:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: tools/go.mod
+          cache-dependency-path: tools/go.sum
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: ".bun-version"
+      - run: bun run screenshot
+      - run: git diff --exit-code -- screenshot.svg
+
   print:
     permissions:
       contents: read
