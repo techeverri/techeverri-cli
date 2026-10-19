@@ -14,6 +14,12 @@ My npm card
 npx techeverri
 ```
 
+Print a QR code for https://techeverri.dev:
+
+```sh
+npx techeverri --qr
+```
+
 Requires Node.js 22+
 
 ## Development

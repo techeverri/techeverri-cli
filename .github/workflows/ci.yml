@@ -36,7 +36,7 @@ jobs:
       - run: bun run lint
       - run: bun run format:check
       - run: bun run build
-      - run: git diff --exit-code -- bin/card
+      - run: git diff --exit-code -- bin/card bin/qr
       - run: bun test
 
   screenshot:
