@@ -14,6 +14,9 @@ go -C tools build -o "$BIN" github.com/charmbracelet/freeze
   --execute "\"$BUN\" \"$ROOT/bin/cli.js\"" \
   --output "$ROOT/screenshot-dark.svg" \
   --window \
+  --border.width 1 \
+  --border.color "#888888" \
+  --border.radius 10 \
   --theme dracula \
   < /dev/null
 
@@ -21,6 +24,9 @@ go -C tools build -o "$BIN" github.com/charmbracelet/freeze
   --execute "\"$BUN\" \"$ROOT/bin/cli.js\"" \
   --output "$ROOT/screenshot-light.svg" \
   --window \
+  --border.width 1 \
+  --border.color "#888888" \
+  --border.radius 10 \
   --background "#ffffff" \
   --theme github-light \
   < /dev/null
