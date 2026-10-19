@@ -11,6 +11,6 @@ const options = {
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
-const card = fs.readFileSync(path.join(__dirname, "..", "dist", "card"), options);
+const card = fs.readFileSync(path.join(__dirname, "card"), options);
 
 console.log(card);
