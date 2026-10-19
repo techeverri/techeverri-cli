@@ -1,6 +1,5 @@
 {
   "window": true,
-  "theme": "dracula",
   "border": {
     "radius": 8,
     "width": 1,
@@ -13,7 +12,6 @@
   },
   "padding": [16, 24, 16, 16],
   "margin": [24, 30, 30, 30],
-  "background": "#171717",
   "font": {
     "family": "JetBrains Mono",
     "size": 14,

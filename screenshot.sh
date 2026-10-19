@@ -12,14 +12,16 @@ go -C tools build -o "$BIN" github.com/charmbracelet/freeze
 
 "$BIN" \
   --config "$ROOT/freeze.json" \
+  --theme catppuccin-mocha \
+  --background "#11111b" \
   --execute "\"$BUN\" \"$ROOT/bin/cli.js\"" \
   --output "$ROOT/screenshot-dark.svg" \
   < /dev/null
 
 "$BIN" \
   --config "$ROOT/freeze.json" \
-  --background "#ffffff" \
-  --theme github-light \
+  --theme catppuccin-latte \
+  --background "#dce0e8" \
   --execute "\"$BUN\" \"$ROOT/bin/cli.js\"" \
   --output "$ROOT/screenshot-light.svg" \
   < /dev/null
