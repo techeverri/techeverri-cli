@@ -2,7 +2,7 @@
 
 # techeverri
 
-My npm card.
+My npm card
 
 ## Usage
 
@@ -10,11 +10,11 @@ My npm card.
 npx techeverri
 ```
 
-Requires Node.js 16+.
+Requires Node.js 16+
 
 ## Development
 
-Requires [Bun](https://bun.sh/).
+Requires [Bun](https://bun.sh/)
 
 ```sh
 bun install
@@ -22,6 +22,6 @@ bun run build
 bun test
 ```
 
-Other scripts are in `package.json`.
+Other scripts are in `package.json`
 
-Inspired by [bitandbang](https://github.com/bnb/bitandbang)'s card.
+Inspired by [bitandbang](https://github.com/bnb/bitandbang)'s card
