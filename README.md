@@ -12,7 +12,7 @@ My npm card
 npx techeverri
 ```
 
-Requires Node.js 16+
+Requires Node.js 22+
 
 ## Development
 
