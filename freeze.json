@@ -3,16 +3,16 @@
   "theme": "dracula",
   "border": {
     "radius": 8,
-    "width": 2,
+    "width": 1,
     "color": "#888888"
   },
   "shadow": {
-    "blur": 24,
+    "blur": 12,
     "x": 0,
-    "y": 12
+    "y": 6
   },
-  "padding": [20, 40, 20, 20],
-  "margin": [30, 40, 40, 40],
+  "padding": [16, 24, 16, 16],
+  "margin": [24, 30, 30, 30],
   "background": "#171717",
   "font": {
     "family": "JetBrains Mono",
