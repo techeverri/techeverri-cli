@@ -11,22 +11,15 @@ mkdir -p "$(dirname "$BIN")"
 go -C tools build -o "$BIN" github.com/charmbracelet/freeze
 
 "$BIN" \
+  --config "$ROOT/freeze.json" \
   --execute "\"$BUN\" \"$ROOT/bin/cli.js\"" \
   --output "$ROOT/screenshot-dark.svg" \
-  --window \
-  --border.width 1 \
-  --border.color "#888888" \
-  --border.radius 10 \
-  --theme dracula \
   < /dev/null
 
 "$BIN" \
-  --execute "\"$BUN\" \"$ROOT/bin/cli.js\"" \
-  --output "$ROOT/screenshot-light.svg" \
-  --window \
-  --border.width 1 \
-  --border.color "#888888" \
-  --border.radius 10 \
+  --config "$ROOT/freeze.json" \
   --background "#ffffff" \
   --theme github-light \
+  --execute "\"$BUN\" \"$ROOT/bin/cli.js\"" \
+  --output "$ROOT/screenshot-light.svg" \
   < /dev/null
