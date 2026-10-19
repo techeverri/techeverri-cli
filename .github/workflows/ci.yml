@@ -54,7 +54,7 @@ jobs:
         with:
           bun-version-file: ".bun-version"
       - run: bun run screenshot
-      - run: git diff --exit-code -- screenshot.svg
+      - run: git diff --exit-code -- screenshot-dark.svg screenshot-light.svg
 
   print:
     permissions:
