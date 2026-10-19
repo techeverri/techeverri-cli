@@ -1,4 +1,4 @@
-# This workflow will run tests using bun and then publish a package to npm when a release is created
+# This workflow will run tests using bun and then publish a package to npm when a release is published
 # For more information see: https://bun.sh/docs/install/ci
 
 name: Publish npm
@@ -6,7 +6,8 @@ name: Publish npm
 on:
   release:
     types:
-      - created
+      - published
+  workflow_dispatch:
 
 jobs:
   ci:
