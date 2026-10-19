@@ -10,7 +10,7 @@ mkdir -p "$(dirname "$BIN")"
 
 go -C tools build -o "$BIN" github.com/charmbracelet/freeze
 
-"$BIN" \
+FORCE_COLOR=3 "$BIN" \
   --config "$ROOT/freeze.json" \
   --theme catppuccin-mocha \
   --background "#11111b" \
@@ -18,7 +18,7 @@ go -C tools build -o "$BIN" github.com/charmbracelet/freeze
   --output "$ROOT/screenshot-dark.svg" \
   < /dev/null
 
-"$BIN" \
+FORCE_COLOR=3 "$BIN" \
   --config "$ROOT/freeze.json" \
   --theme catppuccin-latte \
   --background "#dce0e8" \
