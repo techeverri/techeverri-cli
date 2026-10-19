@@ -4,6 +4,8 @@
 
 My npm card
 
+[![techeverri npm card](./screenshot.svg)](https://www.npmjs.com/package/techeverri)
+
 ## Usage
 
 ```sh
@@ -23,5 +25,7 @@ bun test
 ```
 
 Other scripts are in `package.json`
+
+Regenerate the screenshot with `bun run screenshot` (requires Go 1.24+)
 
 Inspired by [bitandbang](https://github.com/bnb/bitandbang)'s card

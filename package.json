@@ -30,6 +30,7 @@
     "test": "bun test",
     "test:watch": "bun test --watch",
     "print": "bun run ./bin/cli.js",
+    "screenshot": "sh screenshot.sh",
     "build": "bun run build.js",
     "prepublishOnly": "bun run build"
   },
