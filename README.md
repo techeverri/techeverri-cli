@@ -1,8 +1,8 @@
 [![CI](https://github.com/techeverri/techeverri-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/techeverri/techeverri-cli/actions/workflows/ci.yml) [![npm](https://img.shields.io/npm/v/techeverri)](https://www.npmjs.com/package/techeverri)
 
-# techeverri
+# Tomas Echeverri
 
-My npm card
+My terminal business card — run `npx techeverri`
 
 | Dark                                                                            | Light                                                                             |
 | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
