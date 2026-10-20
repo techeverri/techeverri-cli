@@ -1,44 +1,33 @@
-import boxen from "boxen";
 import chalk from "chalk";
+import { stripVTControlCharacters } from "node:util";
 
 // https://github.com/chalk/chalk#chalklevel
 chalk.level = 3;
 
-const employer = chalk.green.italic("Shopify");
+const labelWidth = 8;
+
+const employer = chalk.green("Shopify");
 
 const basics = {
   name: "Tomas Echeverri",
   work: `Senior Software Developer at ${employer}`,
 };
 
-const links = {
-  github: `https://github.com/${chalk.green("techeverri")}`,
-  linkedin: `https://www.linkedin.com/in/${chalk.blue("tomechval")}`,
-  npm: `https://www.npmjs.com/${chalk.red("~techeverri")}`,
-  x: `https://x.com/${chalk.cyan("TomasEcheverri")}`,
-  website: "https://techeverri.dev",
-};
-
-const boxenOptions = {
-  margin: 1,
-  padding: 1,
-  borderStyle: "single",
-  borderColor: "green",
-};
+const links = [
+  ["Website", `${chalk.ansi256(244)("https://")}${chalk.bold("techeverri.dev")}`],
+  ["GitHub", `${chalk.ansi256(244)("https://github.com/")}${chalk.bold("techeverri")}`],
+  ["LinkedIn", `${chalk.ansi256(244)("https://www.linkedin.com/in/")}${chalk.bold("tomechval")}`],
+  ["npm", `${chalk.ansi256(244)("https://www.npmjs.com/")}${chalk.bold("~techeverri")}`],
+  ["X", `${chalk.ansi256(244)("https://x.com/")}${chalk.bold("TomasEcheverri")}`],
+];
 
 export function renderCard() {
-  const text = `
-${chalk.bold(basics.name)}
+  const name = chalk.bold(basics.name);
+  const footer = `${chalk.ansi256(244)("Run this card: ")}${chalk.bold("npx techeverri")}`;
+  const rows = links.map(([label, value]) => `${label.padEnd(labelWidth)}  ${value}`);
+  const width = Math.max(
+    ...[name, basics.work, ...rows, footer].map((line) => stripVTControlCharacters(line).length),
+  );
 
-     ${chalk.bold("Work:")} ${basics.work}
-        ${chalk.bold("X:")} ${chalk.dim(links.x)}
-   ${chalk.bold("GitHub:")} ${chalk.dim(links.github)}
-      ${chalk.bold("npm:")} ${chalk.dim(links.npm)}
- ${chalk.bold("LinkedIn:")} ${chalk.dim(links.linkedin)}
-  ${chalk.bold("Website:")} ${chalk.magenta(links.website)}
-
-     ${chalk.bold("Card:")} ${chalk.dim("npx techeverri")}
-`;
-
-  return boxen(text.trim(), boxenOptions);
+  return [name, basics.work, chalk.ansi256(244)("─".repeat(width)), ...rows, "", footer].join("\n");
 }
