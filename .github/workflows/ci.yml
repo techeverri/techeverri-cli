@@ -50,10 +50,7 @@ jobs:
         with:
           go-version-file: tools/go.mod
           cache-dependency-path: tools/go.sum
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version-file: ".bun-version"
-      - run: bun run screenshot
+      - run: sh screenshot.sh
       - run: git diff --exit-code -- screenshot-dark.svg screenshot-light.svg
 
   print:
